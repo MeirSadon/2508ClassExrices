@@ -1,0 +1,14 @@
+﻿<Window x:Class="_2508Class_Exrices___Exrice1__Sound_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2508Class_Exrices___Exrice1__Sound_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Orientation="Vertical">
+        <local:SoundUserControl SoundType="Volume" MaxSliderValue="130"  Height="100"/>
+        <local:SoundUserControl SoundType="Bass" MaxSliderValue="110" Height="100" Margin="0 50 0 0"/>
+        <local:SoundUserControl SoundType="Amplify" MaxSliderValue="90" Height="100" Margin="0 50 0 0"/>
+    </StackPanel>
+</Window>

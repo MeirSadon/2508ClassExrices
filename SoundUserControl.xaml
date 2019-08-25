@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="_2508Class_Exrices___Exrice1__Sound_.SoundUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:_2508Class_Exrices___Exrice1__Sound_"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <local:ColorConverter x:Key="colorConverter"/>
+        <local:ViewModel x:Key="vm"/>
+        <local:SoundUserControl x:Key="UC"/>
+    </UserControl.Resources>
+
+    <StackPanel Orientation="Horizontal" Height="155">
+            <Label Content="{Binding SoundType}" FontSize="15" HorizontalAlignment="Left" Height="50"  Margin="50"/>
+            <Slider x:Name="MySlider" Value="{Binding SliderValue, Source={StaticResource vm}}"
+                    IsSnapToTickEnabled="True" Minimum="0" Maximum="{Binding MaxSliderValue}" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Width="516" Margin="0,60,50,0"/>
+        <Label Content="{Binding Value, ElementName=MySlider}" Foreground="{Binding Path=Value, ElementName=MySlider, Converter={StaticResource colorConverter}}" 
+               HorizontalContentAlignment="Right" HorizontalAlignment="Center" FontSize="15" Height="50" Margin="-30,52,-1,53"/>
+        <Label Content="/"  HorizontalAlignment="Left" FontSize="15" Height="50" Width="50" Margin="-10"/>
+            <Label Content="{Binding ElementName=MySlider, Path=Maximum}" FontSize="15"  HorizontalAlignment="Left" Height="50" Width="50" Margin="-30"/>
+        </StackPanel>
+</UserControl>
